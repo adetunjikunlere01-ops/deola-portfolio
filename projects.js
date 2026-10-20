@@ -24,20 +24,21 @@ const V=[
 [['Watch the employee sustainability experience','https://www.instagram.com/reel/DKhFjKJt6FJ/?psln=MTVsaHIxaHdzcjJ6ZQ%3D%3D']]
 ];
 const C=[1,5,3,4,2,6]; // Preserve each project's existing cover image after reordering.
-// Four optional supporting images per project: two after Context, two after What I did.
+// Three optional supporting images per project: two after Context, one after What I did.
 // Add image paths in each project's array when the supporting assets are available.
 const G = [
-  ['', '', '', ''],
-  ['', '', '', ''],
-  ['', '', '', ''],
-  ['', '', '', ''],
-  ['', '', '', ''],
-  ['', '', '', '']
+  ['', '', ''],
+  ['', '', ''],
+  ['', '', ''],
+  ['', '', ''],
+  ['', '', ''],
+  ['', '', '']
 ];
 const gallery=(projectIndex,startIndex)=> {
   const paths=G[projectIndex]||[];
-  return `<div class="project-gallery" aria-label="Project images">${[0,1].map(offset=>{
-    const slot=startIndex+offset,src=paths[slot];
+  const slots=startIndex===2?[2]:[0,1];
+  return `<div class="project-gallery" aria-label="Project images">${slots.map(slot=>{
+    const src=paths[slot];
     return src
       ? `<figure class="project-shot"><img src="${src}" alt="Supporting project image ${slot+1}" loading="lazy"></figure>`
       : `<figure class="project-shot project-shot--placeholder"><span>Supporting image ${slot+1}</span><small>Add image path in projects.js</small></figure>`;
