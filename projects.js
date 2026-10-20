@@ -19,9 +19,9 @@ const V=[
 [['RACI matrix and delivery plan',''],['Teams channel and SLA report','']],
 [['Campaign photos and videos','']],
 [['Engagement survey results','']],
-[['Graduate trainee series on YouTube','']],
-[['The Guardian: Flutterwave trains 400 girls, women in Nigeria, Kenya','']],
-[['Photos and videos','']]
+[['120 people. One year. One story. — Instagram reel','https://www.instagram.com/reel/CxIjKmlIxRS/?xtok=MWM2Mnc4bTZ1Zmkybw==']],
+[['The Guardian: Flutterwave trains 400 girls, women in Nigeria, Kenya','https://guardian.ng/news/flutterwave-trains-400-girls-women-in-nigeria-kenya-to-commemorate-womens-history-month/']],
+[['Turning sustainability into an employee experience — Instagram reel','https://www.instagram.com/reel/DKhFjKJt6FJ/?psln=MTVsaHIxaHdzcjJ6ZQ%3D%3D']]
 ];
 // Four optional supporting images per project: two after Context, two after What I did.
 // Add image paths in each project's array when the supporting assets are available.
