@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Projects | Deola Oderinde</title>
+<meta name="description" content="Internal communications and employee engagement professional with 7 years of experience in corporate communications and project management.">
+<meta name="theme-color" content="#1d1c1b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header><div class="w">
+<a class="logo" href="index.html"><span class="dots"><i></i><i></i><i></i></span>Deola Oderinde</a>
+<nav><a href="index.html#about">About</a><a href="projects.html">Projects</a><a href="index.html#praise">Testimonials</a><a class="keep" href="index.html#contact">Contact</a></nav>
+</div></header>
+<main id="top"><section><div class="w"><h2>Selected projects</h2><div id="projects"></div></div></section>
+<section id="contact"><div class="w"><div class="cta">
+<h2>Let’s work together</h2>
+<p>Have a communications or engagement challenge? Send me a brief.</p>
+<div class="btns"><a class="btn" href="mailto:hello@example.com">Email me</a><a class="btn o" href="https://www.linkedin.com/in/your-handle">LinkedIn</a></div>
+</div></div></section>
+</main>
+<footer class="f"><div class="w">© <span id="yr"></span> Deola Oderinde</div></footer>
+
+<script src="projects.js"></script>
+<script>rows(document.getElementById("projects"));document.getElementById("yr").textContent=new Date().getFullYear();const h=location.hash&&document.querySelector(location.hash);if(h)h.scrollIntoView();</script>
+</body>
+</html>
