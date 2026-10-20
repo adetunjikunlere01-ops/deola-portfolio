@@ -27,12 +27,36 @@ const C=[1,5,3,4,2,6]; // Preserve each project's existing cover image after reo
 // Three optional supporting images per project: two after Context, one after What I did.
 // Add image paths in each project's array when the supporting assets are available.
 const G = [
-  ['', '', ''],
-  ['', '', ''],
-  ['', '', ''],
-  ['', '', ''],
-  ['', '', ''],
-  ['', '', '']
+  [
+    'images/projects/oando-change-management/image%201.jpeg',
+    'images/projects/oando-change-management/image%202.jpeg',
+    'images/projects/oando-change-management/image%203.jpeg'
+  ],
+  [
+    'images/projects/women-and-girls-in-tech/image%201.jpeg',
+    'images/projects/women-and-girls-in-tech/image%202.jpeg',
+    'images/projects/women-and-girls-in-tech/image%203.jpeg'
+  ],
+  [
+    'images/projects/centric-ai-engagement/image%201.jpg',
+    'images/projects/centric-ai-engagement/image%202.jpeg',
+    'images/projects/centric-ai-engagement/image%203.jpeg'
+  ],
+  [
+    'images/projects/flutterwave-graduate-story/image%201.jpg',
+    'images/projects/flutterwave-graduate-story/image%202.jpeg',
+    'images/projects/flutterwave-graduate-story/image%203.jpeg'
+  ],
+  [
+    'images/projects/womens-month-2026/image%201.jpeg',
+    'images/projects/womens-month-2026/image%202.jpeg',
+    'images/projects/womens-month-2026/image%203.jpeg'
+  ],
+  [
+    'images/projects/sustainability-campaign/image%201.jpeg',
+    'images/projects/sustainability-campaign/image%202.jpeg',
+    'images/projects/sustainability-campaign/image%203.jpeg'
+  ]
 ];
 const gallery=(projectIndex,startIndex)=> {
   const paths=G[projectIndex]||[];
