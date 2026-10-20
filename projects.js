@@ -19,9 +19,9 @@ const V=[
 [['RACI matrix and delivery plan',''],['Teams channel and SLA report','']],
 [['Campaign photos and videos','']],
 [['Engagement survey results','']],
-[['120 people. One year. One story. — Instagram reel','https://www.instagram.com/reel/CxIjKmlIxRS/?xtok=MWM2Mnc4bTZ1Zmkybw==']],
-[['The Guardian: Flutterwave trains 400 girls, women in Nigeria, Kenya','https://guardian.ng/news/flutterwave-trains-400-girls-women-in-nigeria-kenya-to-commemorate-womens-history-month/']],
-[['Turning sustainability into an employee experience — Instagram reel','https://www.instagram.com/reel/DKhFjKJt6FJ/?psln=MTVsaHIxaHdzcjJ6ZQ%3D%3D']]
+[['Watch the graduate storytelling campaign','https://www.instagram.com/reel/CxIjKmlIxRS/?xtok=MWM2Mnc4bTZ1Zmkybw==']],
+[['Read the feature on training 400 women and girls','https://guardian.ng/news/flutterwave-trains-400-girls-women-in-nigeria-kenya-to-commemorate-womens-history-month/']],
+[['Watch the employee sustainability experience','https://www.instagram.com/reel/DKhFjKJt6FJ/?psln=MTVsaHIxaHdzcjJ6ZQ%3D%3D']]
 ];
 // Four optional supporting images per project: two after Context, two after What I did.
 // Add image paths in each project's array when the supporting assets are available.
@@ -43,4 +43,4 @@ const gallery=(projectIndex,startIndex)=> {
   }).join('')}</div>`;
 };
 const brief=el=>{let n=parseInt(new URLSearchParams(location.search).get('p'),10);if(!(n>=1&&n<=P.length))n=1;const i=n-1,p=P[i],v=(V[i]||[]).filter(x=>x[1]),pv=(i+P.length-1)%P.length,nx=n%P.length;document.title=p[0]+' | Deola Oderinde';
-el.innerHTML=`<a class="back" href="projects.html#p${n}">All projects</a><div class="dh"><div class="m"><b>${p[2]}</b><span>${p[3]}</span></div><div><h1>${p[0]}</h1><ul class="chips">${tags(p)}</ul></div></div><img class="cover" src="images/project-${n}.png" alt="${p[0]} — project hero image" fetchpriority="high"><div class="sec"><h2>Context</h2><p>${p[4]}</p></div>${gallery(i,0)}<div class="sec"><h2>What I did</h2><p>${p[5]}</p></div>${gallery(i,2)}<div class="sec"><h2>Impact</h2><p class="imp">${p[6]}</p></div>${v.length?`<div class="sec"><h2>Evidence and validation</h2><ul class="ev">${L(v,x=>`<li><a href="${x[1]}" target="_blank" rel="noopener">${x[0]}</a></li>`)}</ul></div>`:''}<div class="pn"><a href="project.html?p=${pv+1}"><small>Previous project</small><span>${P[pv][0]}</span></a><a href="project.html?p=${nx+1}"><small>Next project</small><span>${P[nx][0]}</span></a></div>`};
+el.innerHTML=`<a class="back" href="projects.html#p${n}">All projects</a><div class="dh"><div class="m"><b>${p[2]}</b><span>${p[3]}</span></div><div><h1>${p[0]}</h1><ul class="chips">${tags(p)}</ul></div></div><img class="cover" src="images/project-${n}.png" alt="${p[0]} — project hero image" fetchpriority="high"><div class="sec"><h2>Context</h2><p>${p[4]}</p></div>${gallery(i,0)}<div class="sec"><h2>What I did</h2><p>${p[5]}</p></div>${gallery(i,2)}<div class="sec"><h2>Impact</h2><p class="imp">${p[6]}</p></div>${v.length?`<div class="sec"><h2>Project in action</h2><ul class="ev">${L(v,x=>`<li><a href="${x[1]}" target="_blank" rel="noopener">${x[0]}</a></li>`)}</ul></div>`:''}<div class="pn"><a href="project.html?p=${pv+1}"><small>Previous project</small><span>${P[pv][0]}</span></a><a href="project.html?p=${nx+1}"><small>Next project</small><span>${P[nx][0]}</span></a></div>`};
